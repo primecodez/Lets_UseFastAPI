@@ -1,0 +1,9 @@
+Topics to learn that might help while Learning Fastapi
+
+
+Request bodies with Pydantic models (BaseModel).
+Status codes and HTTPException.
+Dependency Injection using Depends().
+APIRouter and organizing projects.
+SQLAlchemy and database integration.
+Authentication (JWT).
