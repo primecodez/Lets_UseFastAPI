@@ -1,0 +1,20 @@
+PRO TIP:
+->Before readig this read notes.txt file first
+
+
+Movig Forward in Fastapi:
+
+    When we type @app.get("users/{id}) what it means 
+    ->Overall its called route declaration (or simply a route).
+  
+
+@app      .get      ("/users/{id}")
+ │          │              │
+ │          │              └── URL path
+ │          └───────────────── HTTP method
+ └──────────────────────────── FastAPI application
+
+ TIPS:
+ -> in Fastapi we use {} (in short variable) to define the dynamic information that Fastapi extracts as a variable 
+
+
