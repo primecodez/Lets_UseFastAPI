@@ -1,0 +1,21 @@
+Things to know in Fastapi
+
+
+
+uvicorn app.main:app --reload
+
+This is the most used thing that you would surely use while working with Fastapi.
+
+Now whats this uvicorn app.main:app --reload
+   the command just tells uvicorn to start and from module app.main fetxh the Fastapi instance  named app 
+
+Here 
+->uvicorn is server that we use its an ASGI server 
+->app is the folder name it could be named anything like whatever you want but as per daily practices we name app 
+->main states the main.py folder where we load the fastapi like you have might have seen from fastapi import Fastapi
+->the second app is the object we create from class Fastapi
+
+TIP:
+->the . means a analogy of using folders and file and simply removing .ext whatvere extensiion like .py and many more
+
+
