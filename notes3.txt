@@ -1,0 +1,13 @@
+ some info 
+
+ - means introduce short term 
+ like -r ,-m etc
+
+ here -r means read
+ here -m means module
+
+
+ -- is used for long desrciptive terms
+ like --version
+    --reload
+    
