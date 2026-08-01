@@ -1,0 +1,36 @@
+SQLAlchemy
+
+
+
+WHAT IS MAPPED AND MAPPED COLUMN?
+   -> WE IMPORT IT FROM SQLALCHEMY.ORM 
+    ->AND ORM STANDS FOR OBJECT-RELATIONAL MAPPING
+
+HERE IS THE FLOW OF HOW IT WORKS:
+
+username
+    │
+    ▼
+Mapped[str]
+    │
+    │ tells Python
+    ▼
+"This is a string."
+
+
+
+mapped_column(String, unique=True)
+    │
+    │ tells SQLAlchemy
+    ▼
+"Create a VARCHAR column.
+Make it unique."
+
+
+#Tip
+username: Mapped[str] = mapped_column(String)
+≈
+TELLS
+    Python: "username is a str."
+
+    SQLAlchemy: "Store username as a VARCHAR column in the database."
