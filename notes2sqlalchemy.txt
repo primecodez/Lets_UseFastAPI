@@ -1,0 +1,33 @@
+SQLAlchemy
+
+RELATIONSHIPS:
+    IT HELPS TO FIND THE CONNECTION EASILY AND SAVES TIME
+
+TYPES OF RELATIONSHIPS:
+  ->ONE TO ONE
+  ->ONE TO AMNY
+    MANY TO ONE
+    MANY TO MANY
+
+
+HOW TO USE RELATIONSHIP AND back_populates:
+     back populates help to connect in a continuous loop like user-post then pot-user
+
+    Basic breakdown:
+
+user       = relationship( "User" , back_populates="posts")
+ ↑                  ↑                      ↑
+Variable      Connected model      Variable name in User
+
+Syntax:
+    class User():
+    posts = relationship("post, back_populates = "user)
+
+    class Post:
+    user = relationship("User", back_populates="posts")
+
+tip:
+->back_populates = "What's the relationship variable called on the other model?"
+
+FOR MORE BRIEF CAN SEARCH ON INTERNET
+BYEEE!
