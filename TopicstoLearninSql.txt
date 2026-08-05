@@ -1,0 +1,39 @@
+Still to learn in SQL: as on 5th ate
+
+                    JOINs (Very important)
+INNER JOIN
+LEFT JOIN
+RIGHT JOIN (less common)
+FULL OUTER JOIN (less common)
+
+
+        Filtering:
+WHERE
+AND, OR
+LIKE
+IN
+BETWEEN
+            
+            Sorting
+ORDER BY
+                
+                Aggregation
+COUNT
+SUM
+AVG
+MIN
+MAX
+Grouping
+GROUP BY
+HAVING
+                        
+                        
+                        Indexes
+Why they speed up queries
+When to create them
+                        
+                        
+                        Transactions
+BEGIN
+COMMIT
+ROLLBACK
