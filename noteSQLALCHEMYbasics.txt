@@ -1,0 +1,55 @@
+                                    SQLALCHEMY BASICS TO KNOW
+
+
+ORM:
+    ORM stands for object relational model
+    It lets us work with Python objects instead of writing SQL for everything.
+
+Core:
+    SQLAlchemy Core is closer to SQL.
+
+in short:
+ORM  → Work with Python objects
+Core → Work with SQL expressions
+
+
+
+whats it looks like :
+
+              SQLAlchemy
+                  │
+             ┌────┴────┐
+             │ Session │
+             └────┬────┘
+                  │
+            asks Engine
+                  ↓
+             ┌────────┐
+             │ Engine │
+             └────┬───┘
+                  ↓
+          Connection Pool
+          ┌────┬────┬────┐
+          │ C1 │ C2 │ C3 │
+          └────┴────┴────┘
+                  ↓
+             PostgreSQL
+
+
+Connection pooling:
+We don't want to create a brand-new database connection every time.
+It has a limited connections
+Suppose the pool can have 5 connections.
+now when you send 6 request it doesnt creat another connection instead it waits and after a connection is free it gets allotment
+
+Engine
+  ↓
+Connection Pool
+┌─────┬─────┬─────┐
+│ C1  │ C2  │ C3  │
+└─────┴─────┴─────┘
+
+
+
+whats a Connection
+A Connection is an actual database communication channel.
