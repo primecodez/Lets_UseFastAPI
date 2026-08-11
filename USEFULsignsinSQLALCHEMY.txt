@@ -1,0 +1,25 @@
+        USEFUL SIGNS USED IN SQLAlchemy 
+
+
+example code:
+def get_user_by_email(
+    db: Session,
+    email: str,
+) -> User | None:
+
+    return db.query(User).filter(User.email == email).first()
+
+
+    here 
+    this -> means "This function returns..."
+
+    so the line:-> User | None:
+    means this function returns either user or None
+
+
+WHEN WE USE METHODS OR SEARCH ANY COLUMN WE USE   " . "
+LIKE db.query(User).filter(User.email == email).first
+
+For other useful methods refer :
+
+            notesaboutmethodsofSQLalchemy

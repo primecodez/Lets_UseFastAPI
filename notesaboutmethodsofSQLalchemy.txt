@@ -1,0 +1,24 @@
+some most used ones:
+
+db.add()             → add object
+db.commit()          → save transaction
+db.refresh()         → reload object from DB
+db.delete()          → mark object for deletion
+
+
+                SOME USEFUL SQLALCHEMY METHODS:
+
+
+
+| Method            | Meaning                           | Example                        |
+| ----------------- | --------------------------------- | ------------------------------ |
+| `.all()`          | Get **all matching records**      | `query.all()`                  |
+| `.first()`        | Get the **first matching record** | `query.first()`                |
+| `.filter(...)`    | **Narrow down** records           | `.filter(User.email == email)` |
+| `.filter_by(...)` | Filter using **column=value**     | `.filter_by(email=email)`      |
+| `.one()`          | Expect **exactly one** record     | `query.one()`                  |
+| `.one_or_none()`  | Expect **0 or 1** record          | `query.one_or_none()`          |
+| `.count()`        | Count matching records            | `query.count()`                |
+| `.order_by(...)`  | Sort results                      | `.order_by(User.id)`           |
+| `.limit(...)`     | Restrict number of results        | `.limit(10)`                   |
+| `.offset(...)`    | Skip some results                 | `.offset(20)`                  |
