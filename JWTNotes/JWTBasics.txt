@@ -1,0 +1,99 @@
+#JWT
+    WHAT IS JWT?
+    JWT STANDS FOR JSON WEB TOKEN
+    FOR THOSE KNOW JSON ITS JAVASCRIPT OBJECT NOTATION
+
+JWT CONSISTS OF 3 PARTS:
+HEADER.PAYLOAD.SIGNATURE
+
+HEADER:
+    The header contains metadata about the token,
+     mainly telling the server how the JWT was created/signed.
+
+Typical JWT Header
+{
+  "alg": "HS256",
+  "typ": "JWT"
+}
+
+    HERE 
+    -alg means the type of Algorithm used while creting SIGNATURE
+    -typ means the Type of token
+
+SOME EXAMPLES OF alg
+"alg": "HS256" 
+    It means the signature was created using the HS256 algorithm
+
+or "alg": "RS256" or alg": "ES256"
+
+
+
+#Payload:
+    The payload is a JSON object containing claims.
+
+Example:
+
+{
+  "sub": "123",
+  "username": "techno",
+  "role": "user",
+  "exp": 1760000000
+}
+
+Whats a claim?
+    Each piece of information inside the payload is called a claim.
+
+For example:
+
+{
+  "sub": "123",
+  "role": "user"
+}
+
+There are two claims:
+
+sub → 123
+role → user
+
+Note:
+        -JWT has some standard registered claims.
+        -DO NOT put sensitive information in payload 
+
+
+For HS256, conceptually:
+
+        HEADER
+           +
+        PAYLOAD
+           +
+       SECRET KEY
+           ↓
+         HS256
+           ↓
+       SIGNATURE
+
+The server later receives:
+
+HEADER.PAYLOAD.SIGNATURE
+
+and calculates the expected signature using its secret key.
+
+If someone changes:
+
+"role": "user"
+
+to:
+
+"role": "admin"
+
+the payload changes.
+
+Therefore the expected signature changes too.
+
+The attacker doesn't know your secret key, so they can't create the correct new signature.
+
+Tip to Remember:
+
+Header: "How was this token made?"
+Payload: "Who/what is this token about, and what are its properties?"
+Signature: "Has anyone tampered with it?"
