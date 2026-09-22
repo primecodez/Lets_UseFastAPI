@@ -1,0 +1,16 @@
+Engine
+    ↓
+knows/configures how to reach PostgreSQL
+
+Session
+    ↓
+object used by your Python code to perform DB work
+
+get_db()
+    ↓
+creates a Session and gives it to the request
+
+in simple:
+engines knows how to communicate with the database
+while session uses that knowledge of engine to do the pythin changes in database
+and get_db function just creates a session to work with
