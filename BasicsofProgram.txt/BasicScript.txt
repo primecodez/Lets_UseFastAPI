@@ -1,0 +1,14 @@
+What is a script?
+
+A script is simply a text file containing commands that a program can execute automatically.
+
+Instead of typing commands one by one:
+
+$env:PATH = ...
+$env:VIRTUAL_ENV = ...
+
+you put them in a file:
+
+Activate.ps1
+
+and run the file once
