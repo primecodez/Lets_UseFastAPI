@@ -1,0 +1,41 @@
+HERE ARE SOME MOST COMMONLY USED PIP COMMANDS:
+
+python -m pip install -r requiremnets.txt
+
+Breakdown of the command:
+            python     -m       pip       install       -r       requirements.txt
+             ↓         ↓        ↓           ↓            ↓             ↓
+            Python   module    package    action      read file      file
+
+
+    Whats pip?
+    pip is a python package installer
+
+    You can write the names of multiple packages in the pip command aswell
+    like  python -m pip install fatsapi uvicorn
+
+How to create a Virtual environment(venv)
+        python -m venv venv
+                    ↑    ↑
+                module folder
+
+#How to activatw a venv?
+Using this command
+            .\venv\Scripts\Activate.ps1
+
+Code Breakdown:
+.\
+ ↓
+"from the current folder"
+
+venv\
+ ↓
+go into the venv folder
+
+Scripts\
+ ↓
+go into Scripts
+
+Activate.ps1
+ ↓
+run this PowerShell script
